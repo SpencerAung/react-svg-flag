@@ -1,5 +1,5 @@
 # React SVG Flag
-A simple component implementing [flag-icon-css](https://www.npmjs.com/package/flag-icon-css) as a React Component
+A simple component implementing [flag-icon-css](https://www.npmjs.com/package/flag-icon-css) as a React Component by utilizing it's resources
 
 ## Useage  
 Import with:  
@@ -13,6 +13,7 @@ code: lower case 2 digit country code
 height: height in pixels
 width: width in pixels
 radius: border radius in pixels
+squared: boolean on whether or not to square icon
 ```
 
 ## Storybook

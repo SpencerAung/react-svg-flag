@@ -1,12 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
-import 'flag-icon-css/css/flag-icon.css';
 
-export function Flag ({ code, height, width, radius }) {
-  const className = classnames('flag-icon', `flag-icon-${code}`);
+export function Flag ({ code, squared, height, width, radius }) {
+  const dim = squared ? '1x1' : '4x3';
+  const image = require(`./flags/${dim}/${code.toLowerCase()}.svg`);
+  const widthBase = squared ? '1em' : '1.33333333em';
+  
+  const theme = {
+    backgroundSize: 'contain',
+    backgroundPosition: '50%',
+    backgroundRepeat: 'no-repeat',
+    position: 'relative',
+    display: 'inline-block',
+    lineHeight: '1em',
+    width: width ? width : widthBase,
+    height: height ? height : 'initial',
+    borderRadius: radius ? radius : 'initial',
+    backgroundImage: `url(${image})`
+  };
+
   return (
-    <span className={ className } style={{ height: height, width: width, borderRadius: radius }} />
+    <span style={theme} />
   );
 }
 
