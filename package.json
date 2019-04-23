@@ -1,0 +1,55 @@
+{
+  "name": "react-svg-flag",
+  "version": "0.0.1",
+  "description": "A component for svg flag icons",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "jest",
+    "storybook": "start-storybook",
+    "build": "webpack --mode production",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ivywitter/react-svg-flag.git"
+  },
+  "keywords": [
+    "flag",
+    "svg",
+    "react"
+  ],
+  "author": "Ivy Witter <ivy@genui.co>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ivywitter/react-svg-flag/issues"
+  },
+  "homepage": "https://github.com/ivywitter/react-svg-flag#readme",
+  "peerDependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
+    "@storybook/addon-a11y": "^5.0.10",
+    "@storybook/addon-knobs": "^5.0.10",
+    "@storybook/react": "^5.0.10",
+    "babel-loader": "^8.0.5",
+    "compression-webpack-plugin": "^2.0.0",
+    "css-loader": "^2.1.1",
+    "file-loader": "^3.0.1",
+    "jest": "^24.7.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.1"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "flag-icon-css": "^3.3.0"
+  }
+}
