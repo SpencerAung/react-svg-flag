@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export function Flag ({ code, squared, height, width, radius }) {
   const dim = squared ? '1x1' : '4x3';
-  const image = require(`./flags/${dim}/${code.toLowerCase()}.svg`);
+  const BaseFlag = require(`./flags/${dim}/${code.toLowerCase()}.js`).default;
   const widthBase = squared ? '1em' : '1.33333333em';
   
   const theme = {
@@ -16,11 +16,10 @@ export function Flag ({ code, squared, height, width, radius }) {
     width: width ? width : widthBase,
     height: height ? height : 'initial',
     borderRadius: radius ? radius : 'initial',
-    backgroundImage: `url(${image})`
   };
 
   return (
-    <span style={theme} />
+    <BaseFlag style={theme} />
   );
 }
 
